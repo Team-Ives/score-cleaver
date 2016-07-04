@@ -12,10 +12,6 @@ import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Logger;
 
 /**
