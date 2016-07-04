@@ -14,6 +14,10 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -30,6 +34,12 @@ public class DisplayScoreActivity extends AppCompatActivity {
      * user interaction before hiding the system UI.
      */
     private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
+
+    private final static Logger log = Logger.getLogger("DisplayScoreActivity");
+
+    private PlayerScore playerOne;
+
+    private PlayerScore playerTwo;
 
     /**
      * Some older devices needs a small delay between UI widget updates
@@ -95,7 +105,10 @@ public class DisplayScoreActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        int message = intent.getIntExtra(SetupActivity.EXTRA_SCORE, 50);
+        String startingScoreString = intent.getStringExtra(SetupActivity.EXTRA_SCORE);
+        log.info("as string: " + startingScoreString);
+        int startingScore = Integer.parseInt(startingScoreString);
+        log.info("as int: " + startingScore);
 
         setContentView(R.layout.activity_display_score);
         ActionBar actionBar = getSupportActionBar();
@@ -105,11 +118,14 @@ public class DisplayScoreActivity extends AppCompatActivity {
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
-        mContentView = findViewById(R.id.fullscreen_content);
+        mContentView = findViewById(R.id.content);
 
-        TextView textView = (TextView) findViewById(R.id.fullscreen_content);
-        textView.setTextSize(40);
-        textView.setText(String.valueOf(message));
+        this.playerOne = new PlayerScore(startingScore, "Player 1");
+        this.playerTwo = new PlayerScore(startingScore, "Player 2");
+
+        this.updateScore(this.playerOne, R.id.playerOneScore);
+        this.updateScore(this.playerTwo, R.id.playerTwoScore);
+
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +155,31 @@ public class DisplayScoreActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void updateScore(PlayerScore player, int id) {
+        TextView textView = (TextView) findViewById(id);
+        textView.setText(String.valueOf(player.currentHealth()));
+    }
+
+    public void injurePlayerOne(View view) {
+        playerOne.injure();
+        this.updateScore(playerOne, R.id.playerOneScore);
+    }
+
+    public void injurePlayerTwo(View view) {
+        playerTwo.injure();
+        this.updateScore(playerTwo, R.id.playerTwoScore);
+    }
+
+    public void healPlayerOne(View view) {
+        playerOne.heal();
+        this.updateScore(playerOne, R.id.playerOneScore);
+    }
+
+    public void healPlayerTwo(View view) {
+        playerTwo.heal();
+        this.updateScore(playerTwo, R.id.playerTwoScore);
     }
 
     private void toggle() {

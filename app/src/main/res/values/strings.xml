@@ -3,7 +3,5 @@
     <string name="edit_message">Enter A Message</string>
     <string name="button_send">Send</string>
 
-    <string name="title_activity_display_score">DisplayScoreActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_display_score">End Game</string>
 </resources>

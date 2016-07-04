@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.logging.Logger;
+
 public class SetupActivity extends AppCompatActivity {
     public final static String EXTRA_SCORE = "mn.ives.scorecleaver.SCORE";
+
+    private final static Logger log = Logger.getLogger("SetupActivity");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +28,8 @@ public class SetupActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayScoreActivity.class);
         EditText editText = (EditText) findViewById(R.id.startScore);
         String scoreString = editText.getText().toString();
-        Integer startScore = Integer.parseInt(scoreString);
-        intent.putExtra(EXTRA_SCORE, startScore.intValue());
+        log.info(scoreString);
+        intent.putExtra(EXTRA_SCORE, scoreString);
         startActivity(intent);
     }
 }
