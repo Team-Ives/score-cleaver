@@ -3,8 +3,13 @@
     android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a6986c"
     tools:context="mn.ives.scorecleaver.DisplayScoreActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/spaaace"
+        android:scaleType = "centerCrop" />
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -21,7 +26,10 @@
         android:textSize="80dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#d4ffffff"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="100dp"
@@ -32,9 +40,10 @@
         android:layout_alignTop="@+id/playerTwoScore"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="#943131"
+        android:background="#b1943131"
         android:onClick="injurePlayerTwo"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:textColor="#d4ffffff" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -46,9 +55,10 @@
         android:layout_alignTop="@+id/p2injure"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="#53722c"
+        android:background="#b153722c"
         android:onClick="healPlayerTwo"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:textColor="#d4ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,7 +70,10 @@
         android:layout_marginBottom="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/playerTwoScore"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#d4ffffff"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="100dp"
@@ -70,9 +83,10 @@
         android:layout_alignBottom="@+id/playerOneScore"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="#53722c"
+        android:background="#b153722c"
         android:onClick="healPlayerOne"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:textColor="#d4ffffff" />
 
     <Button
         android:layout_width="100dp"
@@ -82,9 +96,10 @@
         android:layout_alignTop="@+id/p1heal"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="#943131"
+        android:background="#b1943131"
         android:onClick="injurePlayerOne"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:textColor="#d4ffffff" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
