@@ -1,5 +1,7 @@
 # Score Cleaver
 
+[![Build Status](https://travis-ci.org/Team-Ives/score-cleaver.svg?branch=alexives%2Fadd_travis)](https://travis-ci.org/Team-Ives/score-cleaver)
+
 Score Cleaver is an unofficial score-keeping app for the card game *Star Realms*.
 
 --
