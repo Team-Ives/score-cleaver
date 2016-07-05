@@ -1,3 +1,4 @@
+<img align="left" width="200" src="https://raw.githubusercontent.com/Team-Ives/score-cleaver/efccc21475c098b6a3ea4ffb3743acd6e95184d0/app/src/main/res/mipmap/score_cleaver.png">
 # Score Cleaver
 
 Score Cleaver is an unofficial score-keeping app for the card game *Star Realms*.
