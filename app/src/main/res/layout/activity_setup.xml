@@ -20,7 +20,7 @@
         android:layout_marginTop="46dp"
         android:layout_below="@+id/startScore"
         android:onClick="startGame"
-        android:background="#bfeed167"
+        android:background="@color/yellow"
         android:textSize="30sp"
         android:layout_alignRight="@+id/imageView"
         android:layout_alignEnd="@+id/imageView" />
@@ -35,7 +35,7 @@
         android:layout_marginBottom="39dp"
         android:layout_above="@+id/startScore"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:typeface="serif" />
 
     <EditText
@@ -48,6 +48,6 @@
         android:text="@string/default_score"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
+        android:textColor="@color/white"
         android:typeface="serif" />
 </RelativeLayout>
