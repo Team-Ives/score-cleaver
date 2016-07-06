@@ -3,9 +3,13 @@
 
 Score Cleaver is an unofficial score-keeping app for the card game *Star Realms*.
 
+<a href='https://play.google.com/store/apps/details?id=mn.ives.scorecleaver&hl=en&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='160px'/></a>
+
 --
 
 *Star Realms* is a copyright of [White Wizard Games](http://www.whitewizardgames.com/).
+
+Android, Google Play, and the Google Play logo are trademarks of Google Inc.
 
 ## Software License
 #### Copyright (c) 2016 Courtney & Alex Ives
