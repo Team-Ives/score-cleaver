@@ -8,38 +8,51 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/spaaace"
+        android:src="@drawable/background_stars"
         android:scaleType = "centerCrop"
-        android:id="@+id/imageView" />
+        android:id="@+id/imageView"/>
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:text="@string/start_game"
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:background="@drawable/start"
         android:id="@+id/startGame"
         android:layout_marginTop="46dp"
         android:layout_below="@+id/startScore"
         android:onClick="startGame"
-        android:background="@color/yellow"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:src="@drawable/rest_start"
+        android:text="@string/start_game"
+        android:id="@+id/startGameLabel"
+        android:layout_below="@+id/startScore"
+        android:onClick="startGame"
         android:textSize="30sp"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView" />
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/starting_score_label"
-        android:id="@+id/textView"
+        android:id="@+id/startScoreLabel"
         android:textSize="40sp"
         android:layout_marginBottom="39dp"
         android:layout_above="@+id/startScore"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
-        android:typeface="serif" />
+        android:typeface="serif"
+        android:textAlignment="center" />
 
     <EditText
-        android:layout_width="100dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
@@ -49,5 +62,6 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
-        android:typeface="serif" />
+        android:typeface="serif"
+        android:textAlignment="center" />
 </RelativeLayout>

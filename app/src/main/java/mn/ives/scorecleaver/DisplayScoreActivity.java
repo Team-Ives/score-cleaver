@@ -2,6 +2,7 @@ package mn.ives.scorecleaver;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -115,6 +116,13 @@ public class DisplayScoreActivity extends AppCompatActivity {
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.content);
+
+        TextView p1TextView = (TextView)findViewById(R.id.playerOneScore);
+        TextView p2TextView = (TextView)findViewById(R.id.playerTwoScore);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Audiowide-Regular.ttf");
+
+        p1TextView.setTypeface(custom_font);
+        p2TextView.setTypeface(custom_font);
 
         this.playerOne = new PlayerScore(startingScore, "Player 1");
         this.playerTwo = new PlayerScore(startingScore, "Player 2");
