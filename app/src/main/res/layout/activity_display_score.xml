@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content"
     android:layout_width="match_parent"
@@ -8,96 +8,87 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/spaaace"
+        android:src="@drawable/background_stars"
         android:scaleType = "centerCrop" />
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
 
+    <ImageButton
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:id="@+id/p2injure"
+        android:background="@drawable/injure"
+        android:onClick="injurePlayerTwo"
+        android:layout_gravity="right|top"
+        android:layout_margin="20dp" />
+
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/default_score"
         android:id="@+id/playerTwoScore"
         android:rotation="180"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:textSize="80sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:textColor="@color/white"
         android:typeface="serif"
-        android:textStyle="bold" />
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="@string/injure"
-        android:rotation="180"
-        android:id="@+id/p2injure"
-        android:layout_alignTop="@+id/playerTwoScore"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/red"
-        android:onClick="injurePlayerTwo"
-        android:textSize="60sp"
-        android:textColor="@color/white" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:rotation="180"
-        android:text="@string/heal"
-        android:id="@+id/p2heal"
-        android:layout_alignTop="@+id/p2injure"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/green"
-        android:onClick="healPlayerTwo"
-        android:textSize="60sp"
-        android:textColor="@color/white" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal|top"
+        android:textAlignment="center" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/default_score"
         android:id="@+id/playerOneScore"
         android:textSize="80sp"
-        android:layout_marginBottom="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
         android:textColor="@color/white"
         android:typeface="serif"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal|bottom"
+        android:textAlignment="center" />
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="@string/heal"
+    <ImageButton
+        android:layout_width="105dp"
+        android:layout_height="130dp"
+        android:rotation="180"
         android:id="@+id/p1heal"
-        android:layout_alignBottom="@+id/playerOneScore"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/green"
+        android:background="@drawable/heal"
         android:onClick="healPlayerOne"
         android:textSize="60sp"
-        android:textColor="@color/white" />
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="@string/injure"
+    <ImageButton
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:rotation="180"
         android:id="@+id/p1injure"
-        android:layout_alignTop="@+id/p1heal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/red"
         android:onClick="injurePlayerOne"
-        android:textSize="60sp"
-        android:textColor="@color/white" />
+        android:background="@drawable/injure"
+        android:layout_gravity="left|bottom"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp" />
+
+    <ImageButton
+        android:layout_width="105dp"
+        android:layout_height="130dp"
+        android:id="@+id/p2heal"
+        android:background="@drawable/heal"
+        android:onClick="healPlayerTwo"
+        android:layout_gravity="left|top"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -121,4 +112,4 @@
         </LinearLayout>
 
     </FrameLayout>
-</RelativeLayout>
+</FrameLayout>
