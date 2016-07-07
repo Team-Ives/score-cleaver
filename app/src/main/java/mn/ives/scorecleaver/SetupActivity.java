@@ -20,14 +20,16 @@ public class SetupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
 
-        TextView startScoreTextView = (TextView)findViewById(R.id.startScore);
+        EditText startScoreTextEdit = (EditText)findViewById(R.id.startScore);
         TextView startGameLabelTextView = (TextView)findViewById(R.id.startGameLabel);
         TextView startScoreLabelTextView = (TextView)findViewById(R.id.startScoreLabel);
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Audiowide-Regular.ttf");
 
-        startScoreTextView.setTypeface(custom_font);
+        startScoreTextEdit.setTypeface(custom_font);
         startGameLabelTextView.setTypeface(custom_font);
         startScoreLabelTextView.setTypeface(custom_font);
+
+        startScoreTextEdit.setSelection(startScoreTextEdit.getText().length());
     }
 
     /**
