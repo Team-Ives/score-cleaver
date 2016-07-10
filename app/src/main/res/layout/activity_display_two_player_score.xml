@@ -3,7 +3,7 @@
     android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mn.ives.scorecleaver.DisplayScoreActivity">
+    tools:context="mn.ives.scorecleaver.DisplayTwoPlayerScoreActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -38,9 +38,9 @@
     <ImageButton
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:id="@+id/p2injure"
+        android:id="@+id/playerTwoInjure"
         android:background="@drawable/injure"
-        android:onClick="injurePlayerTwo"
+        android:onClick="injure"
         android:layout_gravity="right|top"
         android:layout_margin="20dp" />
 
@@ -77,9 +77,9 @@
         android:layout_width="105dp"
         android:layout_height="130dp"
         android:rotation="180"
-        android:id="@+id/p1heal"
+        android:id="@+id/playerOneHeal"
         android:background="@drawable/heal"
-        android:onClick="healPlayerOne"
+        android:onClick="heal"
         android:textSize="60sp"
         android:layout_gravity="right|bottom"
         android:layout_marginRight="30dp"
@@ -91,8 +91,8 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:rotation="180"
-        android:id="@+id/p1injure"
-        android:onClick="injurePlayerOne"
+        android:id="@+id/playerOneInjure"
+        android:onClick="injure"
         android:background="@drawable/injure"
         android:layout_gravity="left|bottom"
         android:layout_margin="20dp"
@@ -101,9 +101,9 @@
     <ImageButton
         android:layout_width="105dp"
         android:layout_height="130dp"
-        android:id="@+id/p2heal"
+        android:id="@+id/playerTwoHeal"
         android:background="@drawable/heal"
-        android:onClick="healPlayerTwo"
+        android:onClick="heal"
         android:layout_gravity="left|top"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
