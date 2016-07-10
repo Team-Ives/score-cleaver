@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#1f1f1f</color>
     <color name="colorAccent">#bfeed167</color>
     <color name="black_overlay">#66000000</color>
+    <color name="transparent">#00000000</color>
 
     <color name="white">#d4ffffff</color>
     <color name="yellow">#bfeed167</color>

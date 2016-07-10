@@ -11,8 +11,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
 import java.util.logging.Logger;
 
 /**
@@ -32,11 +36,15 @@ public class DisplayScoreActivity extends AppCompatActivity {
      */
     private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
 
+    private static final int[] PLAYER_COLORS = {R.drawable.player_blue, R.drawable.player_green, R.drawable.player_yellow, R.drawable.player_red, R.color.transparent};
+
     private final static Logger log = Logger.getLogger("DisplayScoreActivity");
 
     private PlayerScore playerOne;
 
     private PlayerScore playerTwo;
+
+    private int lastColor = 0;
 
     /**
      * Some older devices needs a small delay between UI widget updates
@@ -184,6 +192,12 @@ public class DisplayScoreActivity extends AppCompatActivity {
     public void healPlayerTwo(View view) {
         playerTwo.heal();
         this.updateScore(playerTwo, R.id.playerTwoScore);
+    }
+
+    public void changeBackground(View view) {
+        this.lastColor ++;
+        ImageButton imageView = (ImageButton) view;
+        imageView.setBackgroundResource(PLAYER_COLORS[this.lastColor % 5]);
     }
 
     private void toggle() {

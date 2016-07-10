@@ -11,9 +11,29 @@
         android:src="@drawable/background_stars"
         android:scaleType = "centerCrop" />
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/player_yellow"
+        android:scaleType = "centerCrop"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="-20dp"
+        android:onClick="changeBackground"
+        android:minHeight="180dp"
+        android:minWidth="100dp" />
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/player_blue"
+        android:scaleType="centerCrop"
+        android:layout_gravity="top|center"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="-20dp"
+        android:rotation="180"
+        android:onClick="changeBackground"
+        android:minHeight="180dp"
+        android:minWidth="100dp" />
 
     <ImageButton
         android:layout_width="130dp"

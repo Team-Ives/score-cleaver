@@ -44,6 +44,5 @@ public class SetupActivity extends AppCompatActivity {
         log.info(scoreString);
         intent.putExtra(EXTRA_SCORE, scoreString);
         startActivity(intent);
-        finish();
     }
 }
