@@ -5,10 +5,16 @@
     <string name="start_game">Start</string>
     <string name="starting_score_label">Starting Score</string>
     <string name="num_players_label">Players:</string>
+    <string name="resume_game_label">Resume</string>
 
    <!--game view -->
     <string name="title_activity_display_score">End Game</string>
     <string name="default_score">50</string>
     <string name="injure">-</string>
     <string name="heal">+</string>
+
+    <!--preference values-->
+    <string name="last_starting_score">last_starting_score</string>
+    <string name="last_starting_players">last_starting_players</string>
+    <string name="player_prefix">score_cleaver_player_</string>
 </resources>
