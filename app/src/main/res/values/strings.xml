@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">Score Cleaver</string>
 
+    <!--setup view -->
     <string name="start_game">Start</string>
     <string name="starting_score_label">Starting Score</string>
+    <string name="num_players_label">Players:</string>
 
+   <!--game view -->
     <string name="title_activity_display_score">End Game</string>
     <string name="default_score">50</string>
     <string name="injure">-</string>

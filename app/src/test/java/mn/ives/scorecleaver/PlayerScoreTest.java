@@ -10,20 +10,20 @@ import static org.junit.Assert.assertEquals;
 public class PlayerScoreTest {
     @Test
     public void currentHealthReturnsDefaultScore() {
-        PlayerScore score = new PlayerScore(50, "player");
+        PlayerScore score = new PlayerScore(new AbstractScoreActivity(), 50, 50);
         assertEquals(50, score.currentHealth());
     }
 
     @Test
     public void healAddsOneToCurrentHealth() throws Exception {
-        PlayerScore score = new PlayerScore(50, "player");
+        PlayerScore score = new PlayerScore(new AbstractScoreActivity(), 50, 50);
         score.heal();
         assertEquals(51, score.currentHealth());
     }
 
     @Test
     public void injureSubtractsOneToCurrentHealth() {
-        PlayerScore score = new PlayerScore(50, "player");
+        PlayerScore score = new PlayerScore(new AbstractScoreActivity(), 50, 50);
         score.injure();
         assertEquals(49, score.currentHealth());
     }
