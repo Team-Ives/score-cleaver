@@ -1,0 +1,45 @@
+language: android
+android:
+  components:
+    # The BuildTools version used by your project
+    - build-tools-23.0.1
+
+    # The SDK version used to compile your project
+    - android-23
+
+    - extra-google-m2repository
+    - extra-android-m2repository
+
+language: android
+jdk: oraclejdk7
+sudo: false
+
+android:
+  components:
+    # The BuildTools version used by your project
+    - build-tools-23.0.1
+
+    # The SDK version used to compile your project
+    - android-23
+
+    # Extra repositories for build dependencies
+    - extra-google-m2repository
+    - extra-android-m2repository
+
+    # System Images for android tests
+    - sys-img-armeabi-v7a-android-21
+
+  licenses:
+   - 'android-sdk-license-.+'
+
+env:
+  global:
+   # install timeout in minutes (2 minutes by default)
+    - ADB_INSTALL_TIMEOUT=8
+
+# Emulator Management: Create, Start and Wait
+before_script:
+  - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &

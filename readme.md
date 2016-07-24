@@ -1,6 +1,8 @@
 <img align="left" width="200" src="https://raw.githubusercontent.com/Team-Ives/score-cleaver/efccc21475c098b6a3ea4ffb3743acd6e95184d0/app/src/main/res/mipmap/score_cleaver.png">
 # Score Cleaver
 
+[![Build Status](https://travis-ci.org/Team-Ives/score-cleaver.svg?branch=alexives%2Ftravis_ci)](https://travis-ci.org/Team-Ives/score-cleaver)
+
 Score Cleaver is an unofficial score-keeping app for the card game *Star Realms*.
 
 <a href='https://play.google.com/store/apps/details?id=mn.ives.scorecleaver&hl=en&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='160px'/></a>

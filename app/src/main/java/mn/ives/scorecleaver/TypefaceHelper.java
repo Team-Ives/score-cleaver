@@ -13,7 +13,9 @@ public class TypefaceHelper {
 
         for (Integer viewId : views) {
             TextView textView = (TextView)activity.findViewById(viewId);
-            textView.setTypeface(custom_font);
+            if (textView != null) {
+                textView.setTypeface(custom_font);
+            }
         }
     }
 }
