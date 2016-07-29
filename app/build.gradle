@@ -9,8 +9,8 @@ android {
         minSdkVersion 11
         //noinspection OldTargetApi
         targetSdkVersion 23
-        versionCode (System.getenv()['TRAVIS_BUILD_NUMBER'] ? System.getenv()['TRAVIS_BUILD_NUMBER'].toInteger() : 17)
-        versionName "2." + System.getenv()['TRAVIS_BUILD_NUMBER'] ?: 17
+        versionCode (System.getenv()['CIRCLE_BUILD_NUM'] ? System.getenv()['CIRCLE_BUILD_NUM'].toInteger() : 17)
+        versionName "2." + System.getenv()['CIRCLE_BUILD_NUM'] ?: 17
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {

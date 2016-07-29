@@ -3,6 +3,7 @@ package mn.ives.scorecleaver;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
+import android.view.WindowManager;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -19,12 +20,13 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 @LargeTest
 public class DisplayTwoPlayerScoreActivityTest {
     @Rule
-    public ActivityTestRule<SetupActivity> mActivityRule = new ActivityTestRule<>(SetupActivity.class);
+    public ActivityTestRule<DisplayTwoPlayerScoreActivity> mActivityRule = new ActivityTestRule<>(DisplayTwoPlayerScoreActivity.class);
 
     @Before
-    public void setRestoreScoresToFifty() {
-        ScoreTestHelper.setScores(mActivityRule,2,50,50,0,0);
-        onView(withId(R.id.resumeButton)).perform(click());
+    public void setUp() {
+        ScoreTestHelper.setScores(mActivityRule,4,50);
+        ScoreTestHelper.restartActivity(mActivityRule);
+        ScoreTestHelper.keepActivityAwake(mActivityRule);
     }
 
     @Test

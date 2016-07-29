@@ -4,7 +4,9 @@ import android.content.Context;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
+import android.view.WindowManager;
 
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +26,13 @@ public class SetupActivityTest {
     @Rule
     public ActivityTestRule<SetupActivity> mActivityRule = new ActivityTestRule<>(
             SetupActivity.class);
+
+    @Before
+    public void setupTest() {
+        ScoreTestHelper.setScores(mActivityRule,4,50);
+        ScoreTestHelper.restartActivity(mActivityRule);
+        ScoreTestHelper.keepActivityAwake(mActivityRule);
+    }
 
     @Test
     public void testSetupShouldHaveDefaultScoreOfFiftyOrFromPrefs() {
