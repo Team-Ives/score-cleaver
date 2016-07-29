@@ -3,6 +3,7 @@ package mn.ives.scorecleaver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.test.rule.ActivityTestRule;
+import android.widget.TextView;
 
 import static mn.ives.scorecleaver.SetupActivity.SHARED_PREF_SPACE;
 
@@ -19,5 +20,13 @@ public class ScoreTestHelper {
         editor.putInt(prefix + String.valueOf(R.id.playerThreeScore), playerThreeScore);
         editor.putInt(prefix + String.valueOf(R.id.playerFourScore), playerFourScore);
         editor.apply();
+    }
+
+    public static int getCurrentScore(ActivityTestRule mActivityRule, int playerId){
+        return getPotentialUpdatedScore(mActivityRule, playerId, 0);
+    }
+
+    public static int getPotentialUpdatedScore(ActivityTestRule mActivityRule, int playerId, int addedValue) {
+        return Integer.valueOf(((TextView) mActivityRule.getActivity().findViewById(playerId)).getText().toString()) + addedValue;
     }
 }
