@@ -1,0 +1,14 @@
+test:
+  override:
+    # start the emulator
+    - emulator -avd circleci-android22 -no-audio -no-window:
+        background: true
+        parallel: true
+    # wait for it to have booted
+    - circle-android wait-for-boot
+    # unlock the device if necessary
+    - adb shell input keyevent 82
+    # run tests  against the emulator.
+    - ./gradlew connectedAndroidTest
+    # copy the test results to the test results directory.
+    - cp -r app/build/outputs/* $CIRCLE_TEST_REPORTS

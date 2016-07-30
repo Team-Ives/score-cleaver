@@ -41,9 +41,8 @@
     <ImageButton
         android:layout_width="52dp"
         android:layout_height="65dp"
-        android:rotation="180"
         android:id="@+id/playerOneHeal"
-        android:background="@drawable/heal"
+        android:background="@drawable/heal_bottom"
         android:onClick="heal"
         android:textSize="60sp"
         android:layout_gravity="center|bottom"
@@ -53,7 +52,6 @@
     <ImageButton
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:rotation="180"
         android:id="@+id/playerOneInjure"
         android:onClick="injure"
         android:background="@drawable/injure"
@@ -105,7 +103,7 @@
         android:layout_width="52dp"
         android:layout_height="65dp"
         android:id="@+id/playerTwoHeal"
-        android:background="@drawable/heal"
+        android:background="@drawable/heal_top"
         android:onClick="heal"
         android:layout_gravity="center|top"
         android:layout_marginRight="80dp"
@@ -151,12 +149,11 @@
         android:layout_marginBottom="75dp" />
 
     <ImageButton
-        android:layout_width="52dp"
-        android:layout_height="65dp"
+        android:layout_height="52dp"
+        android:layout_width="65dp"
         android:id="@+id/playerThreeHeal"
-        android:background="@drawable/heal"
+        android:background="@drawable/heal_left"
         android:onClick="heal"
-        android:rotation="-90"
         android:layout_gravity="left|center"
         android:layout_marginLeft="17dp"
         android:layout_marginTop="80dp"/>
@@ -201,12 +198,11 @@
         android:layout_marginTop="75dp" />
 
     <ImageButton
-        android:layout_width="52dp"
-        android:layout_height="65dp"
+        android:layout_height="52dp"
+        android:layout_width="65dp"
         android:id="@+id/playerFourHeal"
-        android:background="@drawable/heal"
+        android:background="@drawable/heal_right"
         android:onClick="heal"
-        android:rotation="90"
         android:layout_gravity="right|center"
         android:layout_marginRight="17dp"
         android:layout_marginBottom="80dp"/>

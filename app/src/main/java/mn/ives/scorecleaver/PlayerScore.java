@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.widget.TextView;
 
+import static mn.ives.scorecleaver.SetupActivity.SHARED_PREF_SPACE;
+
 /**
  * Used to keep track of player scores
  */
@@ -21,7 +23,7 @@ public class PlayerScore {
         this.playerUid = activity.getString(R.string.player_prefix) + String.valueOf(playerId);
 
         if(startingScore == RESTORE_SCORES) {
-            SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences sharedPref = activity.getSharedPreferences(SHARED_PREF_SPACE, Context.MODE_PRIVATE);
             this.currentScore = sharedPref.getInt(this.playerUid, startingScore);;
         } else {
             this.currentScore = startingScore;
@@ -34,7 +36,7 @@ public class PlayerScore {
         TextView textView = (TextView) this.activity.findViewById(this.playerId);
         textView.setText(String.valueOf(score));
 
-        SharedPreferences sharedPref = this.activity.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.activity.getSharedPreferences(SHARED_PREF_SPACE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(playerUid, score);
         editor.apply();

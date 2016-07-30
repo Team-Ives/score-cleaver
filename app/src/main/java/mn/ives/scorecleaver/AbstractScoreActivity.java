@@ -18,6 +18,8 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.Map;
 
+import static mn.ives.scorecleaver.SetupActivity.SHARED_PREF_SPACE;
+
 /**
  * Created by Courtney on 7/10/16.
  */

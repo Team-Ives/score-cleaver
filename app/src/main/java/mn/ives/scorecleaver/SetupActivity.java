@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 
 public class SetupActivity extends AppCompatActivity {
     public final static String EXTRA_SCORE = "mn.ives.scorecleaver.SCORE";
+    public final static String SHARED_PREF_SPACE = "mn.ives.scorecleaver.prefs";
 
     private final static Logger log = Logger.getLogger("SetupActivity");
 
@@ -20,7 +21,7 @@ public class SetupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
 
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences(SHARED_PREF_SPACE, Context.MODE_PRIVATE);
         String defaultValue = getResources().getString(R.string.default_score);
         String lastValue = sharedPref.getString(getString(R.string.last_starting_score), defaultValue);
 
@@ -69,7 +70,7 @@ public class SetupActivity extends AppCompatActivity {
     public void resumeGame(View view){
         Intent intent;
 
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences(SHARED_PREF_SPACE, Context.MODE_PRIVATE);
         int lastPlayers = sharedPref.getInt(getString(R.string.last_starting_players), 2);
 
         if(lastPlayers == 2) {
@@ -82,7 +83,7 @@ public class SetupActivity extends AppCompatActivity {
     }
 
     private void storeLastStart(String value, int startingPlayers){
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences(SHARED_PREF_SPACE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(getString(R.string.last_starting_score), value);
         editor.putInt(getString(R.string.last_starting_players), startingPlayers);

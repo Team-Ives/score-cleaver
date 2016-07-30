@@ -24,7 +24,10 @@ public class DisplayFourPlayerScoreActivity extends AbstractScoreActivity {
         Intent intent = getIntent();
 
         String startingScoreString = intent.getStringExtra(SetupActivity.EXTRA_SCORE);
-        int startingScore = Integer.parseInt(startingScoreString);
+        int startingScore = PlayerScore.RESTORE_SCORES;
+        try {
+            startingScore = Integer.parseInt(startingScoreString);
+        } catch(NumberFormatException e){}
 
         PlayerScore playerOne = new PlayerScore(this, R.id.playerOneScore, startingScore);
         PlayerScore playerTwo = new PlayerScore(this, R.id.playerTwoScore, startingScore);

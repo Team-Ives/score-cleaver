@@ -23,7 +23,7 @@ public class PlayerScoreTest {
         TextView mockView = mock(TextView.class);
         when(mockActivity.getString(anyInt())).thenReturn("foo");
         when(mockActivity.findViewById(anyInt())).thenReturn(mockView);
-        when(mockActivity.getPreferences(anyInt())).thenReturn(mockPrefs);
+        when(mockActivity.getSharedPreferences(anyString(), anyInt())).thenReturn(mockPrefs);
         when(mockPrefs.edit()).thenReturn(mockEditor);
         mockEditor.apply(); // LOL, the linter gives a warning without this.
     }
