@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/score-cleaver.iml" filepath="$PROJECT_DIR$/score-cleaver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scorecleaver/app.iml" filepath="$PROJECT_DIR$/scorecleaver/app.iml" />
     </modules>
   </component>
 </project>

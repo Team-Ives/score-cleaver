@@ -1,9 +1,17 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.triplet.play'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias System.getenv()['KEY_NAME']
+            keyPassword System.getenv()['KEY_PASS']
+            storeFile file(System.getenv()['STORE_FILE'] ?: './keystore.jks')
+            storePassword System.getenv()['STORE_PASS']
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-
     defaultConfig {
         applicationId "mn.ives.scorecleaver"
         minSdkVersion 11
@@ -18,8 +26,9 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
